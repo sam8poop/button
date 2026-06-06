@@ -3,11 +3,11 @@
 
 #include <Arduino.h>
 
-class Button // ignore pls :3
+class Button 
 {
 private:
-    int Delay = 10;
-    unsigned long LastButtonPress;
+    unsigned long Delay = 10;
+    unsigned long LastButtonPress = 0;
     int Pin;
 
 public:
@@ -28,7 +28,7 @@ public:
             States[pin] = true;
 			return true;
 		} else {
-            States[pin] = flase;
+            States[pin] = false;
 			return false;
 		}
 	}
