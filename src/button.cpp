@@ -9,17 +9,8 @@ bool Button::Pressed() {
     }
 }
 
-Button::Button(uint8_t button_pin unsigned long delay) {
+Button::Button(uint8_t button_pin, unsigned long delay) {
     Pin = button_pin;
     Delay = delay;
     pinMode(Pin, INPUT_PULLUP);
 }
-bool Dip::Is_on(size_t pin) {
-		if (!digitalRead(Pins[pin])) {
-            States[pin] = true;
-			return true;
-		} else {
-            States[pin] = flase;
-			return false;
-		}
-	}

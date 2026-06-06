@@ -12,7 +12,7 @@ private:
 
 public:
     bool Pressed();
-    Button(int button_pin);
+    Button(uint8_t button_pin, unsigned long delay);
 };
 
 template <size_t T>
@@ -23,7 +23,15 @@ private:
     bool States[T];
 
 public:
-    bool Is_on(size_t pin);
+    bool Is_on(size_t pin) {
+		if (!digitalRead(Pins[pin])) {
+            States[pin] = true;
+			return true;
+		} else {
+            States[pin] = flase;
+			return false;
+		}
+	}
     Dip(uint8_t dip_pins[T])
     {
         for (size_t i = 0; i < T; i++)
