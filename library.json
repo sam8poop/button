@@ -1,0 +1,16 @@
+{
+	"name": "button",
+	"version": "1.1.0",
+	"keywords": "button,arduino",
+	"description": "a simple button and dip class",
+	"homepage": "https://github.com/sam8poop/button.git",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sam8poop/button.git"
+	},
+	"authors": {
+		"name": "chase bridger"
+	},
+	"frameworks": "arduino",
+	"platforms": "*"
+}

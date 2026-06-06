@@ -1,12 +1,9 @@
 #include "button.h"
 
-struct button{
-    unsigned long mills;
-    int prid = 10;
-    bool current_button_sate;
-    bool last_button_state;
-    int pin;
-    button(int button_pin) {
-        pin = button_pin;pinMode(pin,INPUT_PULLUP);
-    }
-};
+button::button(int button_pin) {
+    pin = button_pin;pinMode(pin, INPUT_PULLUP);
+}
+dip::dip(uint8_t dip_pin) {
+    pin = dip_pin;
+    pinMode(pin, INPUT_PULLUP);
+}
